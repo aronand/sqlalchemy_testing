@@ -32,7 +32,8 @@ class Program:
         }
 
         self.running = True
-        print(f"Available commands are: {', '.join([key for key in commands.keys()])}")
+        cmd_string = ", ".join([key for key in commands.keys()])
+        print(f"Available commands are: {cmd_string}")
         while self.running:
             command = input("cmd: ").lower()
             if command == "exit":
